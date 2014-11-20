@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+include 'php-execute/connection.php';
+$id = $_SESSION['id'];
+$_SESSION['YourName'];
+$_SESSION['YourEmail'];
+
+echo $url = "https://www.fblove.com/index.php?".$id;
+$sql = "UPDATE register SET URL='$url' WHERE id='$id'";
+
+if ($conn->query($sql) === TRUE) {
+	//send email
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -40,12 +58,12 @@
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Your Love calculator link</h4></div>
                                	<div class="panel-body">
-									Copy and paste this link to your friend's blog,scrapbook, forum or email to fool him/her.<hr>
+									<?php echo $_SESSION['YourName']; ?>, Copy and paste this link to your friend's blog,scrapbook, forum or email to fool him/her.<hr>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control">https://www.fblove.com/index.php?12456358288526692588221259</textarea>
+                                      <textarea class="form-control" readonly><?php echo $url; ?></textarea>
                                     </div>
                                     Your friends secrets will be sent to you at<br> 
-									alisftpp12@gmail.com                                    					
+									<?php echo $_SESSION['YourEmail']; ?>                                  					
 								</div>
                               </div>						 
 						 
@@ -112,3 +130,6 @@
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
+<?php
+include 'php-execute/connection-close.php';
+?>
