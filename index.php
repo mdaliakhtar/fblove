@@ -1,3 +1,11 @@
+<?php
+$url=$_GET['u'];
+if($_GET['u'] == '') {
+	header("location: register.php");
+	exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -39,31 +47,34 @@
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Calculate love and compatibility</h4></div>
                                	<div class="panel-body">
-									<div class="input-group">
-									  <div class="input-group-btn">
-									  <button class="btn btn-default">U</button>
-									  </div>
-									  <input type="text" class="form-control" placeholder="Your Name">
-									</div> 
-									<div class="input-group">
-									  <div class="input-group-btn">
-									  <button class="btn btn-default">1</button>
-									  </div>
-									  <input type="text" class="form-control" placeholder="1st crush">
-									</div>  
-									<div class="input-group">
-									  <div class="input-group-btn">
-									  <button class="btn btn-default">2</button>
-									  </div>
-									  <input type="text" class="form-control" placeholder="2nd crush">
-									</div>  
-									<div class="input-group">
-									  <div class="input-group-btn">
-									  <button class="btn btn-default">3</button>
-									  </div>
-									  <input type="text" class="form-control" placeholder="3rd crush">
-									</div>
-									<button class="btn btn-primary pull-right" type="button">Calculate</button>								
+                                	<form id="calculator" name="calculator" method="post" action="php-execute/index-agent.php">
+                                    	<input name="URL" type="hidden" value="<?php echo $url; ?>">
+                                        <div class="input-group">
+                                          <div class="input-group-btn">
+                                          <button class="btn btn-default">U</button>
+                                          </div>
+                                          <input name="FoolName" type="text" class="form-control" placeholder="Your Name">
+                                        </div> 
+                                        <div class="input-group">
+                                          <div class="input-group-btn">
+                                          <button class="btn btn-default">1</button>
+                                          </div>
+                                          <input name="1stCrush" type="text" class="form-control" placeholder="1st crush">
+                                        </div>  
+                                        <div class="input-group">
+                                          <div class="input-group-btn">
+                                          <button class="btn btn-default">2</button>
+                                          </div>
+                                          <input name="2ndCrush" type="text" class="form-control" placeholder="2nd crush">
+                                        </div>  
+                                        <div class="input-group">
+                                          <div class="input-group-btn">
+                                          <button class="btn btn-default">3</button>
+                                          </div>
+                                          <input name="3rdCrush" type="text" class="form-control" placeholder="3rd crush">
+                                        </div>
+                                        <button class="btn btn-primary pull-right" type="submit">Calculate</button>
+                                    </form>								
 								</div>
                               </div>						 
 						 

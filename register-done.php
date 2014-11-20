@@ -1,10 +1,15 @@
 <?php
 session_start();
-
+//include 'php-execute/authentication.php';
 include 'php-execute/connection.php';
 $id = $_SESSION['id'];
 $_SESSION['YourName'];
 $_SESSION['YourEmail'];
+
+if($_SESSION['YourEmail'] == '') {
+	header("location: register.php");
+	exit();
+}
 
 echo $url = "https://www.fblove.com/index.php?".$id;
 $sql = "UPDATE register SET URL='$url' WHERE id='$id'";
