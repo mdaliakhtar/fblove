@@ -47,7 +47,7 @@ if($_GET['u'] == '') {
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Calculate love and compatibility</h4></div>
                                	<div class="panel-body">
-                                	<form id="calculator" name="calculator" method="post" action="php-execute/index-agent.php">
+                                	<form id="calculator" name="calculator" method="post" action="fooled.php">
                                     	<input name="URL" type="hidden" value="<?php echo $url; ?>">
                                         <div class="input-group">
                                           <div class="input-group-btn">

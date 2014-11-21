@@ -1,3 +1,30 @@
+<?php
+include 'php-execute/connection.php';
+$url = $_POST['URL'];
+$FoolName = $_POST['FoolName'];
+$stCrush = $_POST['1stCrush'];
+$ndCrush = $_POST['2ndCrush'];
+$rdCrush = $_POST['3rdCrush'];
+
+if($_POST['FoolName'] == '') {
+	header("location: register.php");
+	exit();
+}
+
+$sql = "SELECT * FROM register WHERE id='$url'";
+$result = mysqli_query($conn, $sql);
+if(mysqli_num_rows($result) > 0){
+    // if user registered
+    while($row = mysqli_fetch_assoc($result)){
+		//echo $row["id"];
+		$YourName = $row["YourName"];
+		$YourEmail = $row["YourEmail"];
+		//echo $row["URL"];
+    }
+}else{
+	echo "not fetched data from db";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -37,13 +64,13 @@
                          <!-- main col left --> 
                          <div class="col-sm-5">
                               <div class="panel panel-default">
-                                <div class="panel-heading"><h4>You have been fooled!</h4></div>
+                                <div class="panel-heading"><h4><?php echo $FoolName; ?>, You have been fooled!</h4></div>
                                	<div class="panel-body">
 									<img src="images/fool.png" class="img-circle pull-right">
                                     The name of your crush has been mailed to:<br>
-                                    Ali<br>
+                                    <?php echo $YourName; ?><br>
                                     at<br> 
-                                    ali54@live.in
+                                    <?php echo $YourEmail; ?>
                                     <hr>
                                     <div class="clearfix"></div>
                                     Now its your turn.<br> 
@@ -116,3 +143,6 @@
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
+<?php
+include 'php-execute/connection-close.php';
+?>
