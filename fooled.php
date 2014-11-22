@@ -28,7 +28,7 @@ if(mysqli_num_rows($result) > 0){
 //send email begins	
 $SubFooled = "You have fooled ".$FoolName;
 
-require("php-execute/phpmailer/class.phpmailer.php");
+require("php-execute/PHPMailer_5.2.4/class.phpmailer.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;

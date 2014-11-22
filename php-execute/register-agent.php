@@ -23,7 +23,7 @@ if(mysqli_num_rows($result) > 0){
 	$sql = "INSERT INTO register (YourName, YourEmail, URL)
 	VALUES ('$YourName', '$YourEmail', 'noURL')";
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
+		//echo "New record created successfully";
 		$sql = "SELECT * FROM register WHERE YourEmail='$YourEmail'";
 		$result = mysqli_query($conn, $sql);
 		if(mysqli_num_rows($result) > 0){
