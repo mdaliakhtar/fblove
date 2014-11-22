@@ -1,3 +1,16 @@
+<?php
+session_start();
+	
+unset($_SESSION['SESS_MEMBER_ID']);
+
+unset($_SESSION['id']);
+unset($_SESSION['YourName']);
+unset($_SESSION['YourEmail']);
+unset($_SESSION['FoolName']);
+unset($_SESSION['FoolByYourName']);
+unset($_SESSION['FoolByYourEmail']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>

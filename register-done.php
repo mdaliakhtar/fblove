@@ -11,7 +11,7 @@ if($_SESSION['YourEmail'] == '') {
 	exit();
 }
 
-echo $url = "https://www.fblove.com/index.php?".$id;
+echo $url = "https://www.fblove.com/index.php?u=".$id;
 $sql = "UPDATE register SET URL='$url' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
