@@ -19,6 +19,20 @@ if($_GET['u'] == '') {
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+		<script type="text/javascript">
+            function validrecalculator(){
+                if(document.calculator.FoolName.value == ""){
+                        alert("Please enter Your Name");
+                        document.calculator.FoolName.focus();
+                        return false;
+                }
+                if(document.calculator.stCrush.value == ""){
+                        alert ( "Please enter Your Crush" );
+                        document.calculator.stCrush.focus();
+                        return false;
+                }		
+            }	
+        </script>        
 	</head>
 	<body>
 <div class="wrapper">
@@ -47,7 +61,7 @@ if($_GET['u'] == '') {
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Calculate love and compatibility</h4></div>
                                	<div class="panel-body">
-                                	<form id="calculator" name="calculator" method="post" action="php-execute/index-agent.php">
+                                	<form id="calculator" name="calculator" method="post" action="php-execute/index-agent.php" onSubmit="return validrecalculator();">
                                     	<input name="URL" type="hidden" value="<?php echo $url; ?>">
                                         <div class="input-group">
                                           <div class="input-group-btn">
@@ -59,19 +73,19 @@ if($_GET['u'] == '') {
                                           <div class="input-group-btn">
                                           <button class="btn btn-default">1</button>
                                           </div>
-                                          <input name="1stCrush" type="text" class="form-control" placeholder="1st crush">
+                                          <input name="stCrush" type="text" class="form-control" placeholder="1st crush">
                                         </div>  
                                         <div class="input-group">
                                           <div class="input-group-btn">
                                           <button class="btn btn-default">2</button>
                                           </div>
-                                          <input name="2ndCrush" type="text" class="form-control" placeholder="2nd crush">
+                                          <input name="ndCrush" type="text" class="form-control" placeholder="2nd crush">
                                         </div>  
                                         <div class="input-group">
                                           <div class="input-group-btn">
                                           <button class="btn btn-default">3</button>
                                           </div>
-                                          <input name="3rdCrush" type="text" class="form-control" placeholder="3rd crush">
+                                          <input name="rdCrush" type="text" class="form-control" placeholder="3rd crush">
                                         </div>
                                         <button class="btn btn-primary pull-right" type="submit">Calculate</button>
                                     </form>								

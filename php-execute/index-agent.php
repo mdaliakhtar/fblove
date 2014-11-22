@@ -4,9 +4,9 @@ session_start();
 include 'connection.php';
 $url = $_POST['URL'];
 $FoolName = $_POST['FoolName'];
-$stCrush = $_POST['1stCrush'];
-$ndCrush = $_POST['2ndCrush'];
-$rdCrush = $_POST['3rdCrush'];
+$stCrush = $_POST['stCrush'];
+$ndCrush = $_POST['ndCrush'];
+$rdCrush = $_POST['rdCrush'];
 
 $sql = "SELECT * FROM register WHERE id='$url'";
 $result = mysqli_query($conn, $sql);

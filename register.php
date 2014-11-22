@@ -25,21 +25,21 @@ unset($_SESSION['FoolByYourEmail']);
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+		<script type="text/javascript">
+            function validregister(){
+                if(document.register.YourName.value == ""){
+                        alert("Please enter Your Name");
+                        document.register.YourName.focus();
+                        return false;
+                }
+                if(document.register.YourEmail.value == ""){
+                        alert ( "Please enter Your Email" );
+                        document.register.YourEmail.focus();
+                        return false;
+                }		
+            }	
+        </script>        
 	</head>
-    <script type="text/javascript">
-		function validregister(){
-			if(document.register.YourName.value == ""){
-					alert("Please enter Your Name");
-					document.register.YourName.focus();
-					return false;
-			}
-			if(document.register.YourEmail.value == ""){
-					alert ( "Please enter Your Email" );
-					document.register.YourEmail.focus();
-					return false;
-			}		
-		}	
-	</script>
 	<body>
 <div class="wrapper">
     <div class="box">
