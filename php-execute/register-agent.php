@@ -38,7 +38,7 @@ if(mysqli_num_rows($result) > 0){
 				$URLbyId = $row["id"];
 				$UserYourName = $row["YourName"];
 				$UserYourEmail = $row["YourEmail"];
-				$UserURL = "https://www.fblove.com/index.php?u=".$URLbyId;
+				$UserURL = "http://fblove.azurewebsites.net/index.php?u=".$URLbyId;
 				$SubUser = $UserYourName . ", Your Facebook Love Calculator link";
 				
 				require("PHPMailer_5.2.4/class.phpmailer.php");
