@@ -1,25 +1,17 @@
 <?php
 session_start();
-//include 'php-execute/authentication.php';
-include 'php-execute/connection.php';
-$id = $_SESSION['id'];
-$_SESSION['YourName'];
-$_SESSION['YourEmail'];
 
-if($_SESSION['YourEmail'] == '') {
+$_SESSION['ReturningYourName'];
+
+if($_SESSION['ReturningYourName'] == '') {
 	header("location: register.php");
 	exit();
 }
+$_SESSION['Returningid'];
+$_SESSION['ReturningYourEmail'];
+$_SESSION['ReturningURL'];
 
-$url = "https://www.fblove.com/index.php?u=".$id;
-$sql = "UPDATE register SET URL='$url' WHERE id='$id'";
 
-if ($conn->query($sql) === TRUE) {
-	//send email
-    //echo "Record updated successfully";
-} else {
-    echo "Error updating record: " . $conn->error;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,12 +55,13 @@ if ($conn->query($sql) === TRUE) {
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Your Love calculator link</h4></div>
                                	<div class="panel-body">
-									<?php echo $_SESSION['YourName']; ?>, Copy and paste this link to your friend's blog,scrapbook, forum or email to fool him/her.<hr>
+									Dear <?php echo $_SESSION['ReturningYourName']; ?>, You are a returning user
+and you URL is below. Copy and paste this link to your friend's blog,scrapbook, forum or email to fool him/her.<hr>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" readonly><?php echo $url; ?></textarea>
+                                      <textarea class="form-control" readonly><?php echo $_SESSION['ReturningURL']; ?></textarea>
                                     </div>
                                     Your friends secrets will be sent to you at<br> 
-									<?php echo $_SESSION['YourEmail']; ?>                                  					
+									<?php echo $_SESSION['ReturningYourEmail']; ?>                                  					
 								</div>
                               </div>						 
 						 
@@ -135,6 +128,3 @@ if ($conn->query($sql) === TRUE) {
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
-<?php
-include 'php-execute/connection-close.php';
-?>

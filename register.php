@@ -1,15 +1,18 @@
 <?php
 session_start();
 	
-unset($_SESSION['SESS_MEMBER_ID']);
-
 unset($_SESSION['id']);
 unset($_SESSION['YourName']);
 unset($_SESSION['YourEmail']);
+
 unset($_SESSION['FoolName']);
 unset($_SESSION['FoolByYourName']);
 unset($_SESSION['FoolByYourEmail']);
 
+unset($_SESSION['Returningid']);
+unset($_SESSION['ReturningYourName']);
+unset($_SESSION['ReturningYourEmail']);
+unset($_SESSION['ReturningURL']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
