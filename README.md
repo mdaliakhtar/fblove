@@ -1,4 +1,4 @@
 fblove
 ======
 
-Facebook Love Calculator
+Funbook Love Calculator

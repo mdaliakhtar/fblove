@@ -83,7 +83,21 @@ if ($conn->query($sql) === TRUE) {
                       
                         <div class="row">
                           <div class="col-sm-6">
-                            <a href="https://twitter.com/mdaliakhtar" target="_blank">Twitter</a> <small class="text-muted">|</small> <a href="https://www.facebook.com/AliAkhtarMd" target="_blank">Facebook</a> <small class="text-muted">|</small> <a href="http://in.linkedin.com/in/mdaliakhtar" target="_blank">LinkedIn</a>
+                                If something's not working on Funbook, or you think there's a bug, 
+                                use the link below to report bugs.<br>
+                                <a href="http://in.linkedin.com/in/mdaliakhtar" target="_blank">
+                                	<b>https://www.linkedin.com/in/mdaliakhtar/</b>
+                                </a><br>
+                                <a href="https://twitter.com/mdaliakhtar" target="_blank">
+                                	<b>https://twitter.com/mdaliakhtar/</b>
+                                </a><br>
+                                <a href="https://www.facebook.com/AliAkhtarMd" target="_blank">
+                                	<b>https://www.facebook.com/ALImdaliakhtar/</b>
+                                </a><br>
+                                Giving more detail (ex: adding a screenshot and description) helps 
+                                us find the problem. We may contact you for more details as we investigate. 
+                                Reporting issues when they happen helps make Funbook better, and we 
+                                appreciate the time it takes to give us this information. 
                           </div>
                         </div>
                       
@@ -92,7 +106,8 @@ if ($conn->query($sql) === TRUE) {
                       <hr>
                       
                       <h4>
-                      Copyright 2014. Ali Akhtar Mohammed
+                        Copyright &copy; 2014 <a href="http://in.linkedin.com/in/mdaliakhtar">Ali Akhtar Mohammed</a><br>
+                        Under <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License v3.0</a>   
                       </h4>
 
                     </div><!-- /col-9 -->
