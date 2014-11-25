@@ -18,7 +18,7 @@ $_SESSION['ReturningURL'];
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Facebook Love Calculator</title>
+		<title>Funbook Love Calculator</title>
         <link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
 		<meta name="generator" content="Md Ali Akhtar" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -39,7 +39,7 @@ $_SESSION['ReturningURL'];
                 <!-- top nav -->
               	<div class="navbar navbar-blue navbar-static-top">  
                     <div class="navbar-header">
-                      <a href="/" class="navbar-brand logo">facebook Love Calculator</a>
+                      <a href="/" class="navbar-brand logo">funbook Love Calculator</a>
                   	</div>
                 </div>
                 <!-- /top nav -->
