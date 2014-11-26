@@ -3,7 +3,7 @@
 .---------------------------------------------------------------------------.
 |  Software: Funbook Love Calculator                                        |
 |   Version: 1.0.0                                                          |
-|      Site: https://fvlove.com/                                            |
+|      Site: http://merzent.com/love/                                       |
 | ------------------------------------------------------------------------- |
 |     Admin: Ali Akhtar Mohammed                                            |
 |   Authors: Ali Akhtar Mohammed                                            |
