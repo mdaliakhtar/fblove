@@ -64,11 +64,10 @@ if(mysqli_num_rows($result) > 0){
 				$_SESSION['YourName'] = $row["YourName"];
 				$_SESSION['YourEmail'] = $row["YourEmail"];
 				//send email to new user begins
-				//-----------------------------------------------------------------------
 				$URLbyId = $row["id"];
 				$UserYourName = $row["YourName"];
 				$UserYourEmail = $row["YourEmail"];
-				$UserURL = "http://merzent.com/love/index.php?u=".$URLbyId;
+				$UserURL = "http://merzent.com/love/".$URLbyId;
 				$SubUser = $UserYourName . ", Your Funbook Love Calculator link";
 				
 				require("PHPMailer_5.2.4/class.phpmailer.php");
@@ -84,9 +83,7 @@ if(mysqli_num_rows($result) > 0){
 					echo "Error sending: ".$mail->ErrorInfo;
 				else
 					//echo 'email is sent!';
-					header('Location: ../register-done.php');
-					
-				//--------------------------------------------------------------------------------				
+					header('Location: ../register-done.php');				
 				//send email to new user ends
 			}
 		}else{

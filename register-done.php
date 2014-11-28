@@ -41,7 +41,7 @@ if($_SESSION['YourEmail'] == '') {
 	exit();
 }
 
-$url = "http://merzent.com/love/index.php?u=".$id;
+$url = "http://merzent.com/love/".$id;
 $sql = "UPDATE register SET URL='$url' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
