@@ -86,7 +86,7 @@ $_SESSION['ReturningURL'];
                                 <div class="panel-heading"><h4>Your Love calculator link</h4></div>
                                	<div class="panel-body">
 									Dear <?php echo $_SESSION['ReturningYourName']; ?>, You are a returning user
-and you URL is below. Copy and paste this link to your friend's blog,scrapbook, forum or email to fool him/her.<hr>
+and you link is below. Copy and paste this link to your friend's blog, scrapbook, forum, facebook, twitter, whatsapp  or email to fool him/her.<hr>
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" readonly><?php echo $_SESSION['ReturningURL']; ?></textarea>
                                     </div>

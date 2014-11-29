@@ -93,7 +93,7 @@ if ($conn->query($sql) === TRUE) {
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Your Love calculator link</h4></div>
                                	<div class="panel-body">
-									<?php echo $_SESSION['YourName']; ?>, Copy and paste this link to your friend's blog,scrapbook, forum or email to fool him/her.<hr>
+									<?php echo $_SESSION['YourName']; ?>, Copy and paste this link to your friend's blog, scrapbook, forum, facebook, twitter, whatsapp  or email to fool him/her.<hr>
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" readonly><?php echo $url; ?></textarea>
                                     </div>

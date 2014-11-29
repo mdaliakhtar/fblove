@@ -100,7 +100,7 @@ unset($_SESSION['ReturningURL']);
                               <div class="panel panel-default">
                                 <div class="panel-heading"><h4>Do you also want to make fool of others?</h4></div>
                                	<div class="panel-body">
-                                	This is very easy. Just enter your name and email. You will get a link which can be pasted to your friends scrapbook, email , blogs or forum. Whenever your friends will enter the crush name, it will be send immediately to your email inbox.
+                                	This is very easy. Just enter your name and email. You will get a link which can be pasted to your friends scrapbook, email, blogs, facebook, twitter, whatsapp or forum. Whenever your friends will enter the crush name, it will be send immediately to your email inbox.
                                 	<hr>
                                     <form id="register" name="register" method="post" action="php-execute/register-agent.php" onSubmit="return validregister();">
                                         <div class="input-group">
