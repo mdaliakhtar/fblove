@@ -29,10 +29,10 @@
 '---------------------------------------------------------------------------'
 */
 
-$servername = "iotdb.db.7075738.hostedresource.com";
-$username = "iotdb";
-$password = "Qmax@q123";
-$dbname = "iotdb";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fblove";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
