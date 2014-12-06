@@ -1,5 +1,5 @@
 <?php
-/*~ connection.php
+/*~ connection-close.php
 .---------------------------------------------------------------------------.
 |  Software: Funbook Love Calculator                                        |
 |   Version: 1.0.0                                                          |
@@ -29,16 +29,6 @@
 '---------------------------------------------------------------------------'
 */
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fblove";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+$conn->close();
 
 ?>

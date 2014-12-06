@@ -81,7 +81,7 @@ class PHPMailer {
    * Sets the From email address for the message.
    * @var string
    */
-  public $From              = '';
+  public $From              = 'fblovecalculator@gmail.com';
 
   /**
    * Sets the From name of the message.
@@ -251,13 +251,13 @@ class PHPMailer {
    * Sets SMTP username.
    * @var string
    */
-  public $Username      = '';
+  public $Username      = 'fblovecalculator@gmail.com';
 
   /**
    * Sets SMTP password.
    * @var string
    */
-  public $Password      = '';
+  public $Password      = 'flcpass123';
 
   /**
    *  Sets SMTP auth type. Options are LOGIN | PLAIN | NTLM  (default LOGIN)
